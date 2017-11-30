@@ -639,6 +639,24 @@ lbool Solver::search(int nof_conflicts)
                 	printf( "%d ", var(learnt_clause[i]) + 1 );
                 	}
                 	printf("0 \n");
+
+		std::sort(&learnt_clause[0], &learnt_clause[0] + learnt_clause.size());
+	        std::stringstream ss;
+                for( unsigned i = 0; i < learnt_clause.size(); i++ )
+		{
+			ss << " " << learnt_clause[i];
+		}
+		std::string clause_str = ss.str();
+		auto it = clause_hasher.find(clause_str);
+		if(it != clause_hasher.end())
+		{
+			it->second++;
+		}
+		else
+		{
+			clause_hasher[clause_str] = 1;
+		}
+
                 CRef cr = ca.alloc(learnt_clause, true);
                 learnts.push(cr);
                 attachClause(cr);
@@ -781,6 +799,12 @@ lbool Solver::solve_()
         status = search(rest_base * restart_first);
         if (!withinBudget()) break;
         curr_restarts++;
+    }
+
+    // to do: Вывод статистики в файл
+    for(auto clause : clause_hasher)
+    {
+       // вывод в файл
     }
 
     if (verbosity >= 1)

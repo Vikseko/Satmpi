@@ -26,7 +26,8 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include "mtl/Alg.h"
 #include "utils/Options.h"
 #include "core/SolverTypes.h"
-
+#include <unordered_map>
+#include <sstream>
 
 namespace Minisat {
 
@@ -137,6 +138,8 @@ public:
     //
     uint64_t solves, starts, decisions, rnd_decisions, propagations, conflicts;
     uint64_t dec_vars, clauses_literals, learnts_literals, max_literals, tot_literals;
+
+    std::unordered_map<std::string, int> clause_hasher;
 
 protected:
 
