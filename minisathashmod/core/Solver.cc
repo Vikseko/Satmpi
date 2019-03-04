@@ -821,14 +821,22 @@ lbool Solver::solve_()
     }
 
     // Hashout
-    std::ofstream hashout;
-    hashout.open(hashclausefile);
+    int kmax = 2;
     for(auto clause : clause_hasher)
     {
-    	if(clause.second>1)
+    	if (clause.second > kmax)
+    		kmax = clause.second;
+    }
+    std::ofstream hashout;
+    hashout.open(hashclausefile);
+    for (int k = kmax; k > 1; k--){
+	    for(auto clause : clause_hasher)
     	{
-    		hashout << clause.first << std::endl;
-    		hashout << "c " << clause.second << " povtorov" << std::endl;
+    		if(clause.second==k)
+    		{
+    			hashout << clause.first << std::endl;
+    			hashout << "c " << clause.second << " povtorov" << std::endl;
+    		}
     	}
     }
     hashout.close();

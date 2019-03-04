@@ -1,0 +1,21 @@
+#!/bin/bash
+./minisat_static -cpu-lim=60 ecgrid6x165_shuffled.cnf
+./minisat_static -cpu-lim=60 ecgrid6x210_shuffled.cnf
+./minisat_static -cpu-lim=60 ecgrid6x220_shuffled.cnf
+./minisat_static -cpu-lim=60 ecgrid6x230_shuffled.cnf
+./minisat_static -cpu-lim=60 ecgrid6x250_shuffled.cnf
+./minisat_static -cpu-lim=60 e_rphp065_04.cnf
+./minisat_static -cpu-lim=60 ex179_11.cnf
+./minisat_static -cpu-lim=60 ex187_10.cnf
+./minisat_static -cpu-lim=60 fixedbandwidth-eq-31_shuffled.cnf
+./minisat_static -cpu-lim=60 fixedbandwidth-eq-32_shuffled.cnf
+./minisat_static -cpu-lim=60 g2-ACG-15-10p1.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s105-k35.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s179-k17.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s33-k33.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s516r-k17.cnf
+./minisat_static -cpu-lim=60 g2-mizh-md5-48-2.cnf
+./minisat_static -cpu-lim=60 g2-modgen-n200-m90860q08c40-3230.cnf
+./minisat_static -cpu-lim=60 g2-slp-synthesis-aes-top29.cnf
+./minisat_static -cpu-lim=60 g2-Sz512_15128_1.smt2-cvc4.cnf
+./minisat_static -cpu-lim=60 gus-md5-10.cnf
