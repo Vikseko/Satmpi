@@ -1,0 +1,27 @@
+#!/bin/bash
+./minisat_static -cpu-lim=60 002-80-12.cnf
+./minisat_static -cpu-lim=60 005-80-12.cnf
+./minisat_static -cpu-lim=60 007-80-12.cnf
+./minisat_static -cpu-lim=60 008-80-12.cnf
+./minisat_static -cpu-lim=60 010-80-12.cnf
+./minisat_static -cpu-lim=60 46bits_11.dimacs.cnf
+./minisat_static -cpu-lim=60 46bits_14.dimacs.cnf
+./minisat_static -cpu-lim=60 48bits_11.dimacs.cnf
+./minisat_static -cpu-lim=60 48bits_12.dimacs.cnf
+./minisat_static -cpu-lim=60 48bits_14.dimacs.cnf
+./minisat_static -cpu-lim=60 50bits_10.dimacs.cnf
+./minisat_static -cpu-lim=60 50bits_11.dimacs.cnf
+./minisat_static -cpu-lim=60 50bits_13.dimacs.cnf
+./minisat_static -cpu-lim=60 50bits_14.dimacs.cnf
+./minisat_static -cpu-lim=60 6s167-opt.cnf
+./minisat_static -cpu-lim=60 6s168-opt.cnf
+./minisat_static -cpu-lim=60 6s169-opt.cnf
+./minisat_static -cpu-lim=60 6s17-opt.cnf
+./minisat_static -cpu-lim=60 aes_24_4_keyfind_5.cnf
+./minisat_static -cpu-lim=60 aes_32_3_keyfind_1.cnf
+./minisat_static -cpu-lim=60 atco_enc1_opt1_04_32.cnf
+./minisat_static -cpu-lim=60 atco_enc1_opt2_10_14.cnf
+./minisat_static -cpu-lim=60 atco_enc2_opt2_05_9.cnf
+./minisat_static -cpu-lim=60 atco_enc2_opt2_10_21.cnf
+./minisat_static -cpu-lim=60 bob12m02-opt.cnf
+./minisat_static -cpu-lim=60 dated-5-13-u.cnf
