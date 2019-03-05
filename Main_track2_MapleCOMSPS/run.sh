@@ -1,0 +1,22 @@
+#!/bin/bash
+./MapleCOMSPS_no_DRUP -cpu-lim=60 g2-hwmcc15deep-6s33-k34.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-22.4.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-22.6.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-22.7.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-22.9.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-9_12.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-9_19.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-9_24.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-9_31.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-9_34.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-9_44.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-klieber2017s-0300-034-t12.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-klieber2017s-0300-035-t12.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-klieber2017s-1000-024-eq.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-klieber2017s-1200-024-eq.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-rubikcube012.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-rubikcube212.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-rubikcube312.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-rubikcube512.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-rubikcube812.cnf
+./MapleCOMSPS_no_DRUP -cpu-lim=60 mp1-rubikcube912.cnf
