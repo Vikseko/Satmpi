@@ -1,0 +1,27 @@
+#!/bin/bash
+./minisat_static -cpu-lim=60 g2-ACG-20-10p1.cnf
+./minisat_static -cpu-lim=60 g2-ak128modbtbg1asaig.cnf
+./minisat_static -cpu-lim=60 g2-gss-22-s100.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s188-k44.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s188-k46.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s33-k34.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s340rb63-k22.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s341r-k19.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s366r-k72.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s44-k38.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-6s44-k40.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-beembkry8b1-k45.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-beemcmbrdg7f2-k32.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-beemhanoi4b1-k32.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-beemlifts3b1-k29.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-beemloyd3b1-k31.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-intel032-k84.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-oski15a10b10s-k20.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-oski15a14b04s-k16.cnf
+./minisat_static -cpu-lim=60 g2-hwmcc15deep-oski15a14b30s-k24.cnf
+./minisat_static -cpu-lim=60 g2-slp-synthesis-aes-top24.cnf
+./minisat_static -cpu-lim=60 g2-slp-synthesis-aes-top28.cnf
+./minisat_static -cpu-lim=60 g2-UCG-20-10p1.cnf
+./minisat_static -cpu-lim=60 g2-UR-20-10p1.cnf
+./minisat_static -cpu-lim=60 g2-UTI-20-10p1.cnf
+./minisat_static -cpu-lim=60 mp1-22.4.cnf
