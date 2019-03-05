@@ -32,7 +32,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 
 #include "mtl/Sort.h"
 #include "core/Solver.h"
-
+#include <vector>
 using namespace Minisat;
 
 //#define PRINT_OUT
@@ -1841,6 +1841,8 @@ lbool Solver::search(int& nof_conflicts)
     int         lbd;
     vec<Lit>    learnt_clause;
     bool        cached = false;
+    Lit     singllit;
+    std::vector<Lit> lercl;
     starts++;
 
     // simplify
@@ -1907,6 +1909,42 @@ lbool Solver::search(int& nof_conflicts)
             if (learnt_clause.size() == 1){
                 uncheckedEnqueue(learnt_clause[0]);
             }else{
+                            for ( unsigned i = 0; i < learnt_clause.size(); i++ ) 
+              {
+                singllit = learnt_clause[i];
+              lercl.push_back(singllit);
+            }
+    /*for ( unsigned i = 0; i < lercl.size(); i++ ) {
+                  if ( sign(lercl[i]) )
+                  printf( "-" );
+                  printf( "%d ", var(lercl[i]) + 1 );
+                  }
+                  printf("0 \n");*/
+    std::sort(lercl.begin(), lercl.end());
+
+
+      std::stringstream ss;
+    for ( unsigned i = 0; i < lercl.size(); i++ ) 
+    {
+      ss << " ";
+            if ( sign(lercl[i]) )
+            ss << ( "-" );
+            ss << var(lercl[i])+1;
+        }
+        ss << " 0";
+
+    //std::cout << ss.str() << std::endl;
+    lercl.clear();
+    std::string clause_str = ss.str();
+    auto it = clause_hasher.find(clause_str);
+    if(it != clause_hasher.end())
+    {
+      it->second++;
+    }
+    else
+    {
+      clause_hasher[clause_str] = 1;
+    }
                 CRef cr = ca.alloc(learnt_clause, true);
                 ca[cr].set_lbd(lbd);
                 if (lbd <= core_lbd_cut){
@@ -2117,7 +2155,26 @@ lbool Solver::solve_()
 #endif
         }
     }
-
+    // Hashout
+    int kmax = 2;
+    for(auto clause : clause_hasher)
+    {
+      if (clause.second > kmax)
+        kmax = clause.second;
+    }
+    std::ofstream hashout;
+    hashout.open(hashclausefile);
+    for (int k = kmax; k > 1; k--){
+      for(auto clause : clause_hasher)
+      {
+        if(clause.second==k)
+        {
+          hashout << clause.first << std::endl;
+          hashout << "c " << clause.second << " povtorov" << std::endl;
+        }
+      }
+    }
+    hashout.close();
     if (verbosity >= 1)
         printf("c ===============================================================================\n");
 

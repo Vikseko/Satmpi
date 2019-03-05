@@ -100,6 +100,12 @@ int main(int argc, char** argv)
         S.verbosity = verb;
         
         solver = &S;
+        for (int i=0;i<15;i++)
+        {
+            if (argc==i){
+                S.hashclausefile = std::string("hash") + argv[argc-1];
+            }
+        }
         // Use signal handlers that forcibly quit until the solver will be able to respond to
         // interrupts:
         signal(SIGINT, SIGINT_exit);

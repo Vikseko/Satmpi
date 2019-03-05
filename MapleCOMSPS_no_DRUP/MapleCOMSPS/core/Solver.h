@@ -40,7 +40,13 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include "mtl/Alg.h"
 #include "utils/Options.h"
 #include "core/SolverTypes.h"
-
+#include <unordered_map>
+#include <sstream>
+#include <array>
+#include <algorithm>
+#include <iostream>
+#include <fstream>
+#include <string>
 
 // Don't change the actual numbers.
 #define LOCAL 0
@@ -193,6 +199,10 @@ public:
 #ifdef ANTI_EXPLORATION
     vec<uint32_t> canceled;
 #endif
+    
+    std::unordered_map<std::string, int> clause_hasher;
+    std::string hashclausefile;
+
 
 protected:
 
